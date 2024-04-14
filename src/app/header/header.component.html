@@ -3,10 +3,11 @@
   <div class="row gx-0">
     <div class="col-lg-3 bg-dark d-none d-lg-block">
       <a
-        href="index.html"
         class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center"
       >
-        <h1 class="m-0 text-primary text-uppercase">Hotelier</h1>
+        <h1 class="m-0 text-primary text-uppercase" routerLink="/home">
+          Hotelier
+        </h1>
       </a>
     </div>
     <div class="col-lg-9">
@@ -32,7 +33,7 @@
         </div>
       </div>
       <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
-        <a href="index.html" class="navbar-brand d-block d-lg-none">
+        <a [routerLink]="['home']" class="navbar-brand d-block d-lg-none">
           <h1 class="m-0 text-primary text-uppercase">Hotelier</h1>
         </a>
         <button
@@ -48,10 +49,34 @@
           id="navbarCollapse"
         >
           <div class="navbar-nav mr-auto py-0">
-            <a href="index.html" class="nav-item nav-link active">Home</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="service.html" class="nav-item nav-link">Services</a>
-            <a href="room.html" class="nav-item nav-link">Rooms</a>
+            <a
+              [routerLink]="['home']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="nav-item nav-link"
+              >Home</a
+            >
+            <a
+              [routerLink]="['about']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="nav-item nav-link"
+              >About</a
+            >
+            <a
+              class="nav-item nav-link"
+              [routerLink]="['services']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Services</a
+            >
+            <a
+              class="nav-item nav-link"
+              [routerLink]="['rooms']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              >Rooms</a
+            >
             <div class="nav-item dropdown">
               <a
                 href="#"
@@ -60,12 +85,36 @@
                 >Pages</a
               >
               <div class="dropdown-menu rounded-0 m-0">
-                <a href="booking.html" class="dropdown-item">Booking</a>
-                <a href="team.html" class="dropdown-item">Our Team</a>
-                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                <a
+                  [routerLink]="['booking']"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  class="dropdown-item"
+                  >Booking</a
+                >
+                <a
+                  [routerLink]="['team']"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  class="dropdown-item"
+                  >Our Team</a
+                >
+                <a
+                  [routerLink]="['testimonial']"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  class="dropdown-item"
+                  >Testimonial</a
+                >
               </div>
             </div>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
+            <a
+              [routerLink]="['contact']"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="nav-item nav-link"
+              >Contact</a
+            >
           </div>
         </div>
       </nav>

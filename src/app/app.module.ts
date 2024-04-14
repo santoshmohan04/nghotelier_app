@@ -24,6 +24,9 @@ import { ServicespageComponent } from './servicespage/servicespage.component';
 import { RoomspageComponent } from './roomspage/roomspage.component';
 import { TestimonialpageComponent } from './testimonialpage/testimonialpage.component';
 import { HeaderpaginationComponent } from './headerpagination/headerpagination.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { BookingformComponent } from './bookingform/bookingform.component';
+import { TeampageComponent } from './teampage/teampage.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { HeaderpaginationComponent } from './headerpagination/headerpagination.c
     ServicespageComponent,
     RoomspageComponent,
     TestimonialpageComponent,
-    HeaderpaginationComponent
+    HeaderpaginationComponent,
+    ContactusComponent,
+    BookingformComponent,
+    TeampageComponent
   ],
   imports: [
     BrowserModule,
